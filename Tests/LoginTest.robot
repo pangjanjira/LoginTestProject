@@ -16,7 +16,7 @@ Case 1 : Login Successfull
     Input Text  id:username  tomsmith
     Input Text  id:password  SuperSecretPassword!
     Press Keys  xpath://*[@id="login"]/button/i  [return]
-    Page Should Contain  You logged into a secure area!
+    Wait Until Page Contains  You logged into a secure area!
     Press Keys  xpath://*[@id="content"]/div/a/i  [return]
     Wait Until Page Contains  You logged out of the secure area!
 

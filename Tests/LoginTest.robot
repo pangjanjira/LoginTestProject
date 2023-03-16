@@ -18,7 +18,7 @@ Case 1 : Login Successfull
     Press Keys  xpath://*[@id="login"]/button/i  [return]
     Page Should Contain  You logged into a secure area!
     Press Keys  xpath://*[@id="content"]/div/a/i  [return]
-    Page Should Contain  You logged out of the secure area!
+    Wait Until Page Contains  You logged out of the secure area!
     Close Browser
 
 Case 2 : Login failed - Password incorrect
@@ -32,7 +32,7 @@ Case 2 : Login failed - Password incorrect
     Input Text  id:username  tomsmith
     Input Text  id:password  Password!
     Press Keys  xpath://*[@id="login"]/button/i  [return]
-    Page Should Contain  Your password is invalid!
+    Wait Until Page Contains  Your password is invalid!
     Close Browser
 
 Case 3 : Login failed - Username not found
@@ -46,7 +46,7 @@ Case 3 : Login failed - Username not found
     Input Text  id:username  tomholland
     Input Text  id:password  Password!
     Press Keys  xpath://*[@id="login"]/button/i  [return]
-    Page Should Contain  Your username is invalid!
+    Wait Until Page Contains  Your username is invalid!
     Close Browser
 
 *** Keywords ***
